@@ -1,6 +1,9 @@
 <?php
 
-require_once 'Modele/ClassBillet.php';
+/*require 'Modele/autoloader.php'; 
+Autoloader::register(); */
+
+require_once 'Modele/Billet.php';
 require_once 'Modele/ClassCommentaire.php';
 require_once 'Vue/vue.php';
 
