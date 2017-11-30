@@ -6,8 +6,6 @@ class Billet {
 	private $titre;
 	private $contenu;
 
-
-
 	public function getId(){
 		return $this->id; // retourne la valeur
 	}
@@ -25,18 +23,29 @@ class Billet {
 	}
 
 	public function setId($id){
+		$id = (int) $id;
+		if ($id > 0)
+		{
 		$this->id = $id;
+		}
 	}
+
 	public function setDateb($dateb){
 		$this->dateb = $dateb;
 	}
 
 	public function setTitre($titre){
+		if (is_string($titre))
+		{
 		$this->titre = $titre;
+		}
 	}
 
 	public function setContenu($contenu){
+		if (is_string($contenu))
+		{
 		$this->contenu = $contenu;
+		}
 	}
 	
 
@@ -55,3 +64,4 @@ class Billet {
 	    }
 	  }
 	}
+}
